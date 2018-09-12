@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+* {
+    box-sizing: border-box;
+    background: white;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;  font-weight: 100;
+
+}
+img{
+  /* opacity: 1; */
+  border-radius: 2px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  -webkit-filter:
+  grayscale(0%);
+  filter:blur(0px);
+  filter:drop-shadow(0px 0px 0px white);
+
+}
+
+
+.nav{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    padding: 32px;
+}
+.nav a{
+  color:black;
+  background-color: white;
+  text-decoration: none;
+  font-size: 150%;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+a:hover{
+  color: pink;
+  /* text-decoration: underline; */
+}
+.header{
+  text-align: center;
+    padding: 32px;
+    color: pink;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+.column img:hover{
+  /* opacity: .4; */
+  -webkit-filter:
+  grayscale(0%);
+  filter:grayscale(50%);
+  /* filter: blur(2px); */
+  filter:drop-shadow(8px 8px 10px gray);
+
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+<body>
+  <script>
+    jQuery('body').css('display', 'none');
+    jQuery(document).ready(function() {
+      jQuery('body').fadeIn();
+      jQuery('a').on('click', function(event) {
+        var thetarget = this.getAttribute('target')
+        if (thetarget != "_blank") {
+          var thehref = this.getAttribute('href')
+          event.preventDefault();
+          jQuery('body').fadeOut(function() {
+            //alert(thehref)
+            window.location = thehref
+          });
+        }
+      });
+    });
+    setTimeout(function() {
+      jQuery('body').fadeIn();
+    }, 1000)
+  </script>
+<!-- Header -->
+<!-- <div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div> -->
+<div class="nav">
+  <div><a class="homelink" href="index.html">Home  </a></div>
+  <div><a class="melink"href="#">About Me  </a></div>
+  <div><a class="weblink"href="webproj.html">My Web Designs  </a></div>
+  <div><a class="recipelink" href="http://myrecipebk.wordpress.com">My Recipes</a></div>
+</div>
+<div class="header">
+  <h1>Photo Gallery</h1>
+</div>
+<!-- Photo Grid -->
+<div class="row">
+  <div class="column">
+    <img src="photo portfolio/1.jpg" style="width:100%">
+    <img src="photo portfolio/2.jpg" style="width:100%">
+    <img src="photo portfolio/3.jpg" style="width:100%">
+    <img src="photo portfolio/4.jpg" style="width:100%">
+  </div>
+
+  <div class="column">
+    <img src="photo portfolio/5.jpg" style="width:100%">
+    <img src="photo portfolio/6.jpg" style="width:100%">
+    <img src="photo portfolio/7.jpg" style="width:100%">
+    <img src="photo portfolio/8.jpg" style="width:100%">
+  </div>
+
+  <div class="column">
+    <img src="photo portfolio/9.jpg" style="width:100%">
+    <img src="photo portfolio/10.jpg" style="width:100%">
+    <img src="photo portfolio/12.jpg" style="width:100%">
+    <img src="photo portfolio/13.jpg" style="width:100%">
+  </div>
+
+  <div class="column">
+    <img src="photo portfolio/14.jpg" style="width:100%">
+    <img src="photo portfolio/15.jpg" style="width:100%">
+    <img src="photo portfolio/16.jpg" style="width:100%">
+    <img src="photo portfolio/Egg-Yolk-Jellyfish.gif" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>
