@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Web Designs</title>
+    <link rel="stylesheet" type="text/css" href="css/webdev.css">
+  </head>
+  <body>
+    <script>
+      jQuery('body').css('display', 'none');
+      jQuery(document).ready(function() {
+        jQuery('body').fadeIn();
+        jQuery('a').on('click', function(event) {
+          var thetarget = this.getAttribute('target')
+          if (thetarget != "_blank") {
+            var thehref = this.getAttribute('href')
+            event.preventDefault();
+            jQuery('body').fadeOut(function() {
+              //alert(thehref)
+              window.location = thehref
+            });
+          }
+        });
+      });
+      setTimeout(function() {
+        jQuery('body').fadeIn();
+      }, 1000)
+    </script>
+  <!-- Header -->
+  <!-- <div class="header">
+    <h1>Responsive Image Grid</h1>
+    <p>Resize the browser window to see the responsive effect.</p>
+  </div> -->
+  <div class="nav">
+    <div><a href="index.html">Home  </a></div>
+    <div><a href="index.html">About Me  </a></div>
+    <div ><a class="current" href="photoport.hmtl">My Portfolio  </a></div>
+    <div><a href="http://myrecipebk.wordpress.com">My Recipes</a></div>
+  </div>
+  <div class="header">
+    <h1>My Web Designs</h1>
+  </div>
+  <!-- Photo Grid -->
+  <div class="row">
+    <div class="column">
+      <img src="images/Kit_Kat.png" style="width:100%">
+
+    </div>
+
+    <div class="column">
+      <img src="images/cvillealliance.jpg" style="width:100%">
+
+    </div>
+  </body>
+</html>
