@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+* {
+    box-sizing: border-box;
+    background: black;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;  font-weight: 100;
+
+}
+img{
+  /* opacity: .4;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s; */
+  /* border: 3px solid white;
+  border-radius: 5px;
+   */
+}
+.row > div{
+  border: 3px solid white;
+  border-radius: 5%;
+  border
+}
+
+.nav{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    padding: 32px;
+}
+.current{
+  color: pink;
+}
+.nav a{
+  color:white;
+  background-color: black;
+  font-size: 150%;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+a:hover{
+  color: pink;
+  text-decoration: underline;
+}
+.header{
+  text-align: center;
+    padding: 32px;
+    color: white;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%;
+  flex: 50%;
+  max-width: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+.column img:hover{
+  opacity: 1;
+}
+
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
