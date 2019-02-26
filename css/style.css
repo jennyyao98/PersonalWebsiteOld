@@ -22,6 +22,7 @@ ul li a:hover{
 }
 #top{
 	grid-column: 1/4;
+
 }
 .slider{
 	overflow: hidden;
@@ -53,7 +54,7 @@ ul li a:hover{
 	/* margin-left: 30%; */
 	width: 100%;
 	height: 100vh;
-	margin-top: 15%;
+	margin-top: 140px;
 }
 /* .text{
 	border-style: double;
@@ -224,7 +225,7 @@ a img:hover{
 	}
 	a li{
 		/* margin-bottom: 2em; */
-		font-size: 200%;
+		font-size: 100%;
 	}
 	#aboutme{
 		display: grid;
