@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #e99681;
+}
+
+ul li a:hover {
+  cover: yellow;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  padding-left: 4
+}
+
+/* Create four equal columns that sits next to each other */
+
+.column {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+  max-width: 50%;
+  /* padding: 0 4px; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-style: solid;
+  border-radius: 10%;
+  margin: 50px
+}
+.column{
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: white
+}
+.column a {
+  margin-top: 100px;
+  vertical-align: middle;
+  color: white;
+}
+
+.column:hover {
+  /* opacity: .4; */
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(50%);
+  /* filter: blur(2px); */
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
+.text {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  /* margin-left: 30%; */
+  width: 100%;
+  height: 100vh;
+  margin-top: 140px;
+}
+
+/* .text{
+	border-style: double;
+	border-radius: 5%;
+} */
+
+.text h1 {
+  font-size: 400%;
+  /* padding-left: 10%;
+	padding-right: 10%; */
+}
+
+.text ul {
+  font-size: 250%;
+  /* padding-bottom: 5%; */
+}
+
+.text ul li {
+  color: white;
+}
+
+.text ul li:hover {
+  background-color: #977EFF;
+}
+
+a img {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+a img:hover {
+  filter: invert(100%);
+}
+
+@media screen and (max-width: 2000px) {
+  h1 {
+    font-size: 375s%;
+  }
+  img {
+    size: 150%;
+  }
+  a li {
+    /* margin-bottom: 2em; */
+    font-size: 100%;
+  }
+  .logo{
+    margin-width: 50%
+  }
+  .column a {
+    margin-top: 100px;
+    vertical-align: middle;
+    color: white;
+  }
+  /* #aboutme {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header {
+    grid-column: 1/4;
+  }
+  .section {
+    grid-column: 1/4;
+  } */
+
+}
