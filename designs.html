@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+* {
+    box-sizing: border-box;
+    background: #b0b0b0;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;  font-weight: 100;
+    background: #b0b0b0
+
+}
+img{
+  /* opacity: 1; */
+  border-radius: 2px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  -webkit-filter:
+  grayscale(0%);
+  filter:blur(0px);
+  filter:drop-shadow(0px 0px 0px white);
+
+}
+
+
+.nav{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    padding: 32px;
+}
+.nav a{
+  color:black;
+  background-color: #b0b0b0;
+  text-decoration: none;
+  font-size: 150%;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+a:hover{
+  color: pink;
+  /* text-decoration: underline; */
+}
+.header{
+  text-align: center;
+    padding: 32px;
+    color: pink;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+.column img:hover{
+  /* opacity: .4; */
+  -webkit-filter:
+  grayscale(0%);
+  filter:grayscale(50%);
+  /* filter: blur(2px); */
+  filter:drop-shadow(8px 8px 10px gray);
+
+}
+button{
+  margin-left: 50px;
+  margin-top: 20px;
+}
+a .button1{
+  color: white;
+}
+a .button:active{
+  color: white;
+}
+a. button:hover{
+  color:white;
+  text-decoration: none;
+}
+p{
+  text-align: center;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+<body>
+  <script>
+    jQuery('body').css('display', 'none');
+    jQuery(document).ready(function() {
+      jQuery('body').fadeIn();
+      jQuery('a').on('click', function(event) {
+        var thetarget = this.getAttribute('target')
+        if (thetarget != "_blank") {
+          var thehref = this.getAttribute('href')
+          event.preventDefault();
+          jQuery('body').fadeOut(function() {
+            //alert(thehref)
+            window.location = thehref
+          });
+        }
+      });
+    });
+    setTimeout(function() {
+      jQuery('body').fadeIn();
+    }, 1000)
+  </script>
+<!-- Header -->
+<!-- <div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div> -->
+<div class="nav">
+  <div><a class="homelink" href="index.html">Home</a></div>
+  <div><a class="melink"href="index.html">About Me</a></div>
+  <div><a class="weblink"href="myPortfolio.html">My Designs</a></div>
+  <div><a class="recipelink" href="http://myrecipebk.wordpress.com">My Recipes</a></div>
+</div>
+<a href="myPortfolio.html"><button type="button" class="btn btn-light">Back</button></a>
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <a href="webDesign.html" class="button1" active><input type="radio" name="options" id="option1" autocomplete="off"> Website Design</a>
+  </label>
+  <label class="btn btn-secondary">
+    <a href="#" class="button1" active><input type="radio" name="options" id="option2" autocomplete="off"checked> Other Design</a>
+  </label>
+</div>
+<div class="header">
+  <h1>Other Designs</h1>
+</div>
+<!-- Photo Grid -->
+<div class="row">
+  <div class="column">
+    <img src="otherDesign/1.png" style="width:100%; height:80%">
+    <p>Toronto Pilot System Brief</p>
+  </div>
+
+  <div class="column">
+    <img src="otherDesign/2.png" style="width:100%; height:80%">
+    <p>Sophomore Year Revamp</p>
+  </div>
+
+  <div class="column">
+    <img src="otherDesign/3.png" style="width:100%; height:80%">
+    <p>Scrambled Eggs Recipe Infographic</p>
+  </div>
+
+  <div class="column">
+    <img src="webWork/yamaha.jpg" style="width:100%; height:70%">
+    <p>Yamaha Graphic Design Project</p>
+  </div>
+</div>
+
+</body>
+</html>
